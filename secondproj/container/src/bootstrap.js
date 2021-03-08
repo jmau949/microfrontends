@@ -5,7 +5,7 @@ import App from './App';
 
 ReactDOM.render(<App/>, document.querySelector("#root"))
 
-
+console.log('changes')
 console.log('CONTAINER BOOTSTRAP')
 
 
