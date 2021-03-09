@@ -5,7 +5,7 @@ import App from './App';
 
 
 
-
+console.log('changes')
 // mount function to start up app
 const mount = el => {
     ReactDOM.render(
