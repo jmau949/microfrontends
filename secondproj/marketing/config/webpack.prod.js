@@ -11,7 +11,8 @@ const prodConfig = {
     mode: 'production',
     output: {
         // done for caching
-        filename: '[name].[contenthash].js'
+        filename: '[name].[contenthash].js',
+        publicPath: '/marketing/latest/'
 
     },
     plugins: [
