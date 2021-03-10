@@ -1,8 +1,8 @@
-import { mount } from "marketing/MarketingApp";
+import { mount } from "auth/AuthApp";
 import React, { useRef, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
-const MarketingApp = () => {
+const AuthApp = ({ onSignIn }) => {
   const ref = useRef(null);
   const history = useHistory();
   // when ref is defined, render into div
@@ -15,13 +15,13 @@ const MarketingApp = () => {
         if (pathname !== nextPathName) {
           history.push(nextPathName);
         }
-
-        console.log("container noticed nagivation in marketing");
+        console.log("container noticed nagivation in Auth");
       },
+      onSignIn,
     });
     history.listen(onParentNavigate);
   }, []);
   return <div ref={ref}></div>;
 };
 
-export default MarketingApp;
+export default AuthApp;
